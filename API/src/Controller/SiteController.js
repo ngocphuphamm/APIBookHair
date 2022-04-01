@@ -2,15 +2,16 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 // const cloudinary = require("../utils/cloudinary");
 class SiteController {
-	async Login(req,res,next)
+	async Login(req,response,next)
 	{
+		console.log("da vao ");
 		const email = req.body.email.toLowerCase() ;
 		const password = req.body.password ;
 
 		const user = await  User.findOne({ email: email,password: password})
 		if(!user)
 		{
-			return res.status(202).json({
+			return response.send({
 				"success" : false,
 
 			})
@@ -20,7 +21,7 @@ class SiteController {
 			var  token = jwt.sign({
 				_id : user.id
 			},'mk');
-			return res.status(404).json({
+			return response.send({
 				"success" : true,
 				"token" : token ,
 				"user" : user
