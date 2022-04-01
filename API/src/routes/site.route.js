@@ -5,7 +5,10 @@ const siteController = require("../Controller/SiteController");
 
 
 
-router.get("/",siteController.getAllSite);
+router.post("/login",siteController.Login);
 
+router.get("/",(req,res,next)=>{
+    res.send("hello");
+})
 
 module.exports = router;

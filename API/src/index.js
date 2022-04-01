@@ -10,7 +10,7 @@ const route = require("./routes/index");
 
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/ClothesWeb", {
+mongoose.connect("mongodb://localhost:27017/APIBOOKHAIR", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
@@ -19,6 +19,9 @@ app.use(express.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: false })); // support encoded bodies
 // app.use("/public", express.static("public"));
 
+const db = require('../src/config/index');
+// connect to db 
+db.connect();
 
 app.use(cookieParser());
 
