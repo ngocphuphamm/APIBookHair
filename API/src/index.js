@@ -7,13 +7,17 @@ const port = 4000;
 
 const route = require("./routes/index");
 
+const path = require('path')
 
 
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/APIBOOKHAIR", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+// const mongoose = require("mongoose");
+// mongoose.connect("mongodb://localhost:27017/APIBOOKHAIR", {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true,
+// });
 
 app.use(express.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: false })); // support encoded bodies

@@ -1,7 +1,9 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const Salon = require('../models/Salon');
 // const cloudinary = require("../utils/cloudinary");
 class SiteController {
+	// [POST] /api/login
 	async Login(req,response,next)
 	{
 		console.log("da vao ");
@@ -13,7 +15,6 @@ class SiteController {
 		{
 			return response.send({
 				"success" : false,
-
 			})
 		}
 		else
@@ -29,7 +30,36 @@ class SiteController {
 		}
 
 	}
+	//[GET] /api/getSalon
+	async getSalon(req,res,next)
+	{
+		console.log("da vao");
+		const listSalons = await Salon.find();
+		// for(var i =0 ; i < listSalons.length ; i++)
+		// {
+			
+		// 	if(listSalons[i].id > listSalons[i+1].id)
+		// 	{
+		// 		let temp = listSalons[i].id;
+		// 		listSalons[i].id = listSalons[i+1].id
+		// 		listSalons[i+1].id = temp;
+		// 	}
+		// }
+		// await	listSalons.forEach((el)=>{
+		// 	let totalRating =0 ;
+		// 	let countRating = 0 ; 
+		// 	el['totalRating'] = totalRating;
 
+		// 	el['countRating'] = countRating;
+		// 	el['rating'] = 0 ;
+			
+		
+		// })
+		
+		return res.send({
+			"success": true,
+			"salon" : listSalons});
+	}
 }
 
 ;

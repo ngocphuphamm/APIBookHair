@@ -12,4 +12,6 @@ router.get("/",(req,res,next)=>{
     res.send("hello");
 })
 
+router.post("/getSalon",siteController.getSalon)
+
 module.exports = router;
