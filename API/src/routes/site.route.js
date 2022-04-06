@@ -17,4 +17,6 @@ router.post("/getSalon",siteController.getSalon)
 
 router.get("/getSalonFeature",siteController.getSalonFeature);
 router.get("/getDichvu",siteController.getDichvu)
+
+router.post("/YeuThich",siteController.postYeuThich)
 module.exports = router;

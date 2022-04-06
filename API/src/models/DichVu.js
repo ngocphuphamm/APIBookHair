@@ -4,7 +4,7 @@ const NhanVien = require("../models/Nhanvien");
 const DichVu = new mongoose.Schema(
 	{
 		id : Number,
-       	salonId : {type : String , ref : Salon } ,
+       	tenSalon : {type : String } ,
 		id_NhanVien :{type : String ,ref:NhanVien},
         tenDichvu : String , 
         giaTien : String ,  
