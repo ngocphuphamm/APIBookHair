@@ -3,10 +3,10 @@ const route = require(".");
 const router = express.Router();
 
 const siteController = require("../Controller/SiteController");
-
-
-
-router.post("/login",siteController.Login);
+const authController = require("../Controller/AuthController");
+const dichvuController = require("../Controller/DichVuController");
+const yeuthichController = require("../Controller/YeuThichController");
+router.post("/login",authController.Login);
 
 router.get("/",(req,res,next)=>{
     console.log("da vaoo");
@@ -14,9 +14,11 @@ router.get("/",(req,res,next)=>{
 })
 
 router.post("/getSalon",siteController.getSalon)
-
+router.post("/YeuThich",yeuthichController.postYeuThich)
 router.get("/getSalonFeature",siteController.getSalonFeature);
-router.get("/getDichvu",siteController.getDichvu)
 
-router.post("/YeuThich",siteController.postYeuThich)
+
+router.get("/getDichvu",dichvuController.getDichvu)
+
+
 module.exports = router;
