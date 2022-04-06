@@ -49,6 +49,13 @@ class SiteController {
 	}
 
 
+	//[GET] /api/getSalonById/:id
+	async getSalonById(req,res,next)
+	{
+		const id = req.params.id
+		const salon = await  Salon.findOne({"id":id});
+		res.send(salon);
+	}
 
 
 }

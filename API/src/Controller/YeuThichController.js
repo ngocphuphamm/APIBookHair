@@ -1,3 +1,9 @@
+const User = require('../models/User');
+const jwt = require('jsonwebtoken');
+const Salon = require('../models/Salon');
+const DichVu = require('../models/DichVu');
+const YeuThich = require('../models/YeuThich');
+var ObjectId = require('mongodb').ObjectID;
 class YeuThichController{
 	//[POST] /api/YeuThich
     async postYeuThich(req, res, next) {

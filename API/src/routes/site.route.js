@@ -14,11 +14,12 @@ router.get("/",(req,res,next)=>{
 })
 
 router.post("/getSalon",siteController.getSalon)
-router.post("/YeuThich",yeuthichController.postYeuThich)
 router.get("/getSalonFeature",siteController.getSalonFeature);
-
+router.get("/getSalonById/:id",siteController.getSalonById);
 
 router.get("/getDichvu",dichvuController.getDichvu)
 
+
+router.post("/YeuThich",yeuthichController.postYeuThich)
 
 module.exports = router;
