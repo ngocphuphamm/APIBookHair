@@ -9,6 +9,7 @@ const Salon = new mongoose.Schema(
         hinhAnh : String , 
         rating : Number, 
         noiBat : {type : Number , default : 0} ,
+       
   
     },
 	{

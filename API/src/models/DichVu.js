@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
-
+const Salon = require("../models/Salon");
+const NhanVien = require("../models/Nhanvien");
 const DichVu = new mongoose.Schema(
 	{
-        salon : string ,
-        nameDV : string , 
-        price : Number 
+		id : Number,
+       	salonId : {type : String , ref : Salon } ,
+		id_NhanVien :{type : String ,ref:NhanVien},
+        tenDichvu : String , 
+        giaTien : String ,  
+		hinhanh : String,
     },
 	{
 		timestamps: true,
