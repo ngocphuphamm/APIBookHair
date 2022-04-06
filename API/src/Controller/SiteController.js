@@ -53,10 +53,44 @@ class SiteController {
 	async getSalonById(req,res,next)
 	{
 		const id = req.params.id
-		const salon = await  Salon.findOne({"id":id});
-		res.send(salon);
-	}
+		const favorite = await YeuThich.findOne({"user_id":id})
+		if(favorite)
+		{
+			console.log("co du lieu");
+			const salon = await Salon.findOne({"id":favorite['salon_id']});
+			const customData= {
+				"_id": salon._id,
+				"id" : salon.id,
+				"tenSalon": salon.tenSalon,
+				"chuTiem" : salon.chuTiem,
+				"diaChi" : salon.diaChi,
+				"hinhAnh" : salon.hinhAnh,
+				"rating" : salon.rating,
+				"noibat": salon.noibat,
+				"selfLove": true,
+			}
+			res.send({
+				"success": true,
+				"salon": [customData]
+			})
 
+
+			
+		}
+		else{
+			console.log("chua co du lieu");
+			
+			const customData= {
+			
+				"selfLove": false,
+			}
+			res.send({
+				"success": true,
+				"salon": [customData]
+			})
+		}
+		
+	}
 
 }
 
