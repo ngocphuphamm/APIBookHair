@@ -18,6 +18,21 @@ class DichVuController{
 		});
 
 	}
+
+	//[get] /api/getDichVuBySalon
+	async getDichVuBySalon(req,res,next)
+	{
+		console.log("da vao");
+		const salon =  await Salon.findOne({"id":req.params.id});
+	
+		const dichvu  = await DichVu.find({"tenSalon":salon.tenSalon});
+		
+		res.send({
+			"success":true,
+			"dichvu" : dichvu
+		});
+		
+	}
 }
 
 module.exports = new DichVuController();

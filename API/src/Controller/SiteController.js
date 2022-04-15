@@ -6,7 +6,7 @@ const YeuThich = require('../models/YeuThich');
 var ObjectId = require('mongodb').ObjectID;
 // const cloudinary = require("../utils/cloudinary");
 class SiteController {
-	
+
 	//[GET] /api/getSalon
 	async getSalon(req, res, next) {
 		console.log("da vao salon");
@@ -50,22 +50,20 @@ class SiteController {
 
 
 	//[GET] /api/getSalonById/:id
-	async getSalonById(req,res,next)
-	{
+	async getSalonById(req, res, next) {
 		const id = req.params.id
-		const favorite = await YeuThich.findOne({"user_id":id})
-		if(favorite)
-		{
-			console.log("co du lieu");
-			const salon = await Salon.findOne({"id":favorite['salon_id']});
-			const customData= {
+		const favorite = await YeuThich.findOne({ "user_id": id })
+		if (favorite) {
+
+			const salon = await Salon.findOne({ "id": favorite['salon_id'] });
+			const customData = {
 				"_id": salon._id,
-				"id" : salon.id,
+				"id": salon.id,
 				"tenSalon": salon.tenSalon,
-				"chuTiem" : salon.chuTiem,
-				"diaChi" : salon.diaChi,
-				"hinhAnh" : salon.hinhAnh,
-				"rating" : salon.rating,
+				"chuTiem": salon.chuTiem,
+				"diaChi": salon.diaChi,
+				"hinhAnh": salon.hinhAnh,
+				"rating": salon.rating,
 				"noibat": salon.noibat,
 				"selfLove": true,
 			}
@@ -75,13 +73,14 @@ class SiteController {
 			})
 
 
-			
+
 		}
-		else{
-			console.log("chua co du lieu");
-			
-			const customData= {
-			
+		else {
+
+
+
+			const customData = {
+
 				"selfLove": false,
 			}
 			res.send({
@@ -89,7 +88,7 @@ class SiteController {
 				"salon": [customData]
 			})
 		}
-		
+
 	}
 
 }

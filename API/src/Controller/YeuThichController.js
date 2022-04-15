@@ -4,14 +4,14 @@ const Salon = require('../models/Salon');
 const DichVu = require('../models/DichVu');
 const YeuThich = require('../models/YeuThich');
 var ObjectId = require('mongodb').ObjectID;
-class YeuThichController{
+class YeuThichController {
 	//[POST] /api/YeuThich
-    async postYeuThich(req, res, next) {
+	async postYeuThich(req, res, next) {
 		console.log(req.body);
 		const yeuthichsearch = await YeuThich.findOne({ "salon_id": req.body.id, "user_id": req.body.userId });
 
 		if (yeuthichsearch) {
-			console.log("da co yeu thichj")
+
 			// // const userId = yeuthichsearch['user_id'];
 			// const user = await User.findOne({'_id': new ObjectId(userId)})
 			const idYeuThich = await yeuthichsearch['_id'];
@@ -22,7 +22,7 @@ class YeuThichController{
 			})
 		}
 		else {
-			console.log("chua co yeu thich");
+
 			const data = {
 				"user_id": req.body.userId,
 				"salon_id": req.body.id

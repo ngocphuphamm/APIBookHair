@@ -4,11 +4,14 @@ const NhanVien = require("../models/Nhanvien");
 const DichVu = new mongoose.Schema(
 	{
 		id : Number,
+		// // model này hơi ngu sau này cải thiện 
+		// idSalon  : {type:String ,ref:NhanVien},
        	tenSalon : {type : String } ,
 		id_NhanVien :{type : String ,ref:NhanVien},
         tenDichvu : String , 
         giaTien : String ,  
 		hinhanh : String,
+		thoiGian : Number
     },
 	{
 		timestamps: true,

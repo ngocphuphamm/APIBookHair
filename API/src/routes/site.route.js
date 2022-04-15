@@ -18,8 +18,11 @@ router.get("/getSalonFeature",siteController.getSalonFeature);
 router.get("/getSalonById/:id",siteController.getSalonById);
 
 router.get("/getDichvu",dichvuController.getDichvu)
-
+router.get("/getDichVuBySalon/:id",dichvuController.getDichVuBySalon);
 
 router.post("/YeuThich",yeuthichController.postYeuThich)
+
+
+
 
 module.exports = router;
