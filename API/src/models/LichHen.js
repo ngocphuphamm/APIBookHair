@@ -6,6 +6,7 @@ const LichHen = new mongoose.Schema(
         nhanvien : String,
         dichvu : String,
         salon : String,
+		
     },
 	{
 		timestamps: true,

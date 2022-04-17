@@ -1,11 +1,14 @@
 const mongoose = require("mongoose");
-
+const Salon = require("../models/Salon");
 const NhanVien = new mongoose.Schema(
 	{
-		 salon : String ,
-         dichvu : [],
-         lichhen : String,
-
+		id_NhanVien : Number , 
+		id_salon :  {type : Number , ref: Salon },
+		hoTen :  String,
+		diaChi : String , 
+		soDienThoai : Number, 
+		chucvu : String,
+		id_DichVu : [] 
     },
 	{
 		timestamps: true,
