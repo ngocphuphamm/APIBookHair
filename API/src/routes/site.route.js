@@ -31,4 +31,4 @@ router.get("/getNhanVienBySalon/:time,:idsalon,:iddichvu",nhanvienController.get
 router.post("/DatLich",lichhenController.postDatLich);
 
 
-module.exports = router;
+module.exports = router; 

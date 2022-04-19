@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 
 const LichHen = new mongoose.Schema(
 	{
-        user : String,
-        nhanvien : String,
-        dichvu : String,
-        salon : String,
+		id_salon  : Number , 
+		id_NhanVien : Number , 
+		id_DichVu  : Number ,
+		thoiGian : String,
+		ngayHen : Date
 		
     },
 	{
