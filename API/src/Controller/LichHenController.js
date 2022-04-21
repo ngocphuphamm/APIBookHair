@@ -71,7 +71,7 @@ class LichHenController {
             "salon": salon,
             "user": user
         };
-
+        console.log(customDataReturn);
         res.send({
             "success": true,
             "message": "Dat lich thanh cong",
@@ -80,5 +80,37 @@ class LichHenController {
 
 
     }
+    
+    async getLichHenSapToi(req,res,next)
+    {
+        const array = [];
+        function dateToYMD(date) {
+            var d = date.getDate();
+            var m = date.getMonth() + 1;
+            var y = date.getFullYear();
+            return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+        }
+        
+        const  lichhen = await LichHen.find({"id_user":req.body.userId,"status":"Chưa xác nhận"});
+        lichhen.forEach((el)=>{
+            const ngayhen =  dateToYMD(el['ngayHen']);
+            const dataCustom = {
+                "id_salon": el['id_salon'],
+                "id_user": el['id_user'],
+                "id_NhanVien": el['id_NhanVien'],
+                "id_DichVu":el['id_DichVu'],
+                "thanhTien": el['thanhTien'],
+                "thoiGian":el['thoiGian'],
+                "status" : el['status'],
+                "ngayHen": ngayhen
+            }
+            array.push(dataCustom);
+        })
+        res.send({
+            "success":true,
+            "lichhen" : dataCustom
+        });
+;    
+    }   
 }
 module.exports = new LichHenController();
