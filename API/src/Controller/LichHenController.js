@@ -6,7 +6,7 @@ const User = require("../models/User");
 const NhanVien = require("../models/Nhanvien");
 const Salon = require("../models/Salon");
 var mongoose = require('mongoose');
-
+const dateToYMD = require('../function/function');
 class LichHenController {
     // quá trình lịch hẹn post dat lich vấn đề sao lấy được _id trong khi mới save xong 
     /* lichhen : {
@@ -71,7 +71,7 @@ class LichHenController {
             "salon": salon,
             "user": user
         };
-        console.log(customDataReturn);
+
         res.send({
             "success": true,
             "message": "Dat lich thanh cong",
@@ -80,37 +80,36 @@ class LichHenController {
 
 
     }
-    
-    async getLichHenSapToi(req,res,next)
-    {
-        const array = [];
-        function dateToYMD(date) {
-            var d = date.getDate();
-            var m = date.getMonth() + 1;
-            var y = date.getFullYear();
-            return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
-        }
-        
-        const  lichhen = await LichHen.find({"id_user":req.body.userId,"status":"Chưa xác nhận"});
-        lichhen.forEach((el)=>{
-            const ngayhen =  dateToYMD(el['ngayHen']);
+
+
+    async getLichHenSapToi(req, res, next) {
+        let array = [];
+
+         const lichhen = await LichHen.find({ "id_user": req.body.userId, "status": "Chưa xác nhận" })
+
+        await Promise.all(await lichhen.map(async (el) => {
+
+            const ngayhen = dateToYMD(el['ngayHen']);
+            const idLichHen = mongoose.Types.ObjectId(el['_id']);
+            const salon = await Salon.findOne({ "id": el['id_salon'] });
+            const nhanvien = await NhanVien.findOne({ "id_NhanVien": 1 });
+
             const dataCustom = {
-                "id_salon": el['id_salon'],
+                "_id": idLichHen,
+                "salon": salon,
                 "id_user": el['id_user'],
-                "id_NhanVien": el['id_NhanVien'],
-                "id_DichVu":el['id_DichVu'],
+                "nhanvien": nhanvien,
+                "id_DichVu": el['id_DichVu'],
                 "thanhTien": el['thanhTien'],
-                "thoiGian":el['thoiGian'],
-                "status" : el['status'],
+                "thoiGian": el['thoiGian'],
+                "status": el['status'],
                 "ngayHen": ngayhen
             }
-            array.push(dataCustom);
-        })
-        res.send({
-            "success":true,
-            "lichhen" : dataCustom
-        });
-;    
-    }   
+            await array.push(dataCustom);
+        }))
+        res.send(array);
+
+
+    }
 }
 module.exports = new LichHenController();
