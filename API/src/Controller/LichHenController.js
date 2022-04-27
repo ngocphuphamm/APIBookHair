@@ -83,12 +83,13 @@ class LichHenController {
 
  //[GET] api/getLichHenSapToi
   async getLichHenSapToi(req, res, next) {
+    console.log("da vao")
     let array = [];
     console.log("=============================================================");
-    console.log(req.body);
+    console.log(req.params.id);
     console.log("==================================================")
     const lichhen = await LichHen.find({
-      id_user: req.body.userId,
+      id_user: req.params.id,
       status: "Chưa xác nhận",
     });
 
@@ -122,6 +123,7 @@ class LichHenController {
 
   //[GET] api/getLichDaDat
   async getLichDaDat(req, res, next) {
+
     let array = [];
 
     const lichhen = await LichHen.find({
