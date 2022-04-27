@@ -83,12 +83,13 @@ class LichHenController {
 
  //[GET] api/getLichHenSapToi
   async getLichHenSapToi(req, res, next) {
+    console.log("da vao")
     let array = [];
     console.log("=============================================================");
-    console.log(req.body);
+    console.log(req.params.id);
     console.log("==================================================")
     const lichhen = await LichHen.find({
-      id_user: req.body.userId,
+      id_user: req.params.id,
       status: "Chưa xác nhận",
     });
 
@@ -122,10 +123,12 @@ class LichHenController {
 
   //[GET] api/getLichDaDat
   async getLichDaDat(req, res, next) {
+
     let array = [];
 
     const lichhen = await LichHen.find({
-      id_user: req.body.userId,
+      id_user: req.params.id,
+      status : "Chưa xác nhận"
     });
 
     await Promise.all(
@@ -133,7 +136,45 @@ class LichHenController {
         const ngayhen = dateToYMD(el["ngayHen"]);
         const idLichHen = mongoose.Types.ObjectId(el["_id"]);
         const salon = await Salon.findOne({ id: el["id_salon"] });
-        const nhanvien = await NhanVien.findOne({ id_NhanVien: 1 });
+        const nhanvien = await NhanVien.findOne({ id_NhanVien: el["id_NhanVien"] });
+
+        const dataCustom = {
+          _id: idLichHen,
+          salon: salon,
+          id_user: el["id_user"],
+          nhanvien: nhanvien,
+          id_DichVu: el["id_DichVu"],
+          thanhTien: el["thanhTien"],
+          thoiGian: el["thoiGian"],
+          status: el["status"],
+          ngayHen: ngayhen,
+        };
+        await array.push(dataCustom);
+      })
+    );
+
+    res.send({
+      success: true,
+      lichhen: array,
+    });
+  }
+
+
+ async getLichHenDaDuyet(req,res,next)
+  {
+    let array = [];
+
+    const lichhen = await LichHen.find({
+      id_user: req.params.id,
+      status : "Đã Xác Nhận"
+    });
+
+    await Promise.all(
+      await lichhen.map(async (el) => {
+        const ngayhen = dateToYMD(el["ngayHen"]);
+        const idLichHen = mongoose.Types.ObjectId(el["_id"]);
+        const salon = await Salon.findOne({ id: el["id_salon"] });
+        const nhanvien = await NhanVien.findOne({ id_NhanVien: el["id_NhanVien"] });
 
         const dataCustom = {
           _id: idLichHen,
