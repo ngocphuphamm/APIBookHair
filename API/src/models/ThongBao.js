@@ -4,7 +4,7 @@ const ThongBao = new mongoose.Schema(
 	{
        user_id : String,
        salon_id : Number , 
-	   nhanVien_id : String ,
+	   nhanVien_id : Number , 
        noiDung  : String, 
        chiTietNoiDung : String ,
     },

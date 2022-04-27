@@ -37,8 +37,8 @@ class LichHenController {
       nhanVien_id: req.body.id_Nhanvien,
       noiDung: "Đặt lịch thành công",
       chiTietNoiDung:
-        "Lịch Cắt Ngày" +
-        req.body.ngayHen +
+        "Lịch Cắt Ngày " +
+        req.body.ngayHen +  " " + 
         "thành công tại" +
         dichvu["tenSalon"],
     };
@@ -83,11 +83,9 @@ class LichHenController {
 
  //[GET] api/getLichHenSapToi
   async getLichHenSapToi(req, res, next) {
-    console.log("da vao")
+
     let array = [];
-    console.log("=============================================================");
-    console.log(req.params.id);
-    console.log("==================================================")
+
     const lichhen = await LichHen.find({
       id_user: req.params.id,
       status: "Chưa xác nhận",
@@ -127,8 +125,7 @@ class LichHenController {
     let array = [];
 
     const lichhen = await LichHen.find({
-      id_user: req.params.id,
-      status : "Chưa xác nhận"
+      id_user: req.params.id
     });
 
     await Promise.all(
@@ -159,7 +156,7 @@ class LichHenController {
     });
   }
 
-
+   //[GET] api/getLichDaDat
  async getLichHenDaDuyet(req,res,next)
   {
     let array = [];
