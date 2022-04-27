@@ -31,6 +31,6 @@ router.get("/getNhanVienBySalon/:time,:idsalon,:iddichvu",nhanvienController.get
 router.post("/DatLich",lichhenController.postDatLich);
 router.get("/getLichHenSapToi/:id",lichhenController.getLichHenSapToi);
 router.get("/getLichDaDat",lichhenController.getLichDaDat);
-
+router.get("/getLichHenDaDuyet/:id",lichhenController.getLichHenDaDuyet);
 
 module.exports = router; 
