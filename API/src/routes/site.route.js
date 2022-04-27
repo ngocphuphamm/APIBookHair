@@ -30,5 +30,7 @@ router.get("/getNhanVienBySalon/:time,:idsalon,:iddichvu",nhanvienController.get
 
 router.post("/DatLich",lichhenController.postDatLich);
 router.get("/getLichHenSapToi",lichhenController.getLichHenSapToi);
+router.get("/getLichDaDat",lichhenController.getLichDaDat);
+
 
 module.exports = router; 

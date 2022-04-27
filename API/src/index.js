@@ -1,6 +1,7 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
 const app = express();
+const {networkInterfaces} = require("os")
 
 const bodyParser = require("body-parser");
 const port = 4000;
@@ -32,5 +33,7 @@ app.use(cookieParser());
 route(app);
 
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+	const nets = networkInterfaces();
+
+    console.log(`server run in http:\/\/${nets["Wi-Fi"][1].address}:${port}`);
 });
