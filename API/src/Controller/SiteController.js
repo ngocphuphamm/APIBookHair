@@ -6,9 +6,22 @@ const YeuThich = require("../models/YeuThich");
 var ObjectId = require("mongodb").ObjectID;
 // const cloudinary = require("../utils/cloudinary");
 class SiteController {
+
+  // 
+  async getInfoSalon(req, res, next) {
+    const idSalon = Number(req.params.id);
+    const salon = await Salon.findOne({ "id": idSalon });
+    console.log(salon);
+    res.send({
+      "success": true,
+      "salon": [salon],
+    })
+  }
+
+
   //[GET] /api/getSalon
   async getSalon(req, res, next) {
-  
+
     const listSalons = await Salon.find();
     // for(var i =0 ; i < listSalons.length ; i++)
     // {

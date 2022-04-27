@@ -16,6 +16,7 @@ router.get("/",(req,res,next)=>{
     res.send("hello");
 })
 
+router.get("/getInfoSalon/:id",siteController.getInfoSalon);
 router.post("/getSalon",siteController.getSalon)
 router.get("/getSalonFeature",siteController.getSalonFeature);
 router.get("/getSalonById/:id",siteController.getSalonById);
