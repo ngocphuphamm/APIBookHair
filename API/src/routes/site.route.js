@@ -8,6 +8,7 @@ const dichvuController = require("../Controller/DichVuController");
 const yeuthichController = require("../Controller/YeuThichController");
 const nhanvienController = require("../Controller/NhanVienController");
 const lichhenController = require("../Controller/LichHenController");
+const thongbaoController = require("../Controller/ThongBaoController");
 router.post("/login",authController.Login);
 
 router.get("/",(req,res,next)=>{
@@ -30,7 +31,9 @@ router.get("/getNhanVienBySalon/:time,:idsalon,:iddichvu",nhanvienController.get
 
 router.post("/DatLich",lichhenController.postDatLich);
 router.get("/getLichHenSapToi/:id",lichhenController.getLichHenSapToi);
-router.get("/getLichDaDat",lichhenController.getLichDaDat);
+router.get("/getLichDaDat/:id",lichhenController.getLichDaDat);
 router.get("/getLichHenDaDuyet/:id",lichhenController.getLichHenDaDuyet);
+
+router.get("/getThongBao/:id",thongbaoController.getThongBao);
 
 module.exports = router; 
