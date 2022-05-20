@@ -9,6 +9,9 @@ const yeuthichController = require("../Controller/YeuThichController");
 const nhanvienController = require("../Controller/NhanVienController");
 const lichhenController = require("../Controller/LichHenController");
 const thongbaoController = require("../Controller/ThongBaoController");
+const userController = require("../Controller/UserController");
+
+
 router.post("/login",authController.Login);
 
 router.get("/",(req,res,next)=>{
@@ -37,4 +40,10 @@ router.get("/getLichHenDaDuyet/:id",lichhenController.getLichHenDaDuyet);
 
 router.get("/getThongBao/:id",thongbaoController.getThongBao);
 
+
+
+
+router.post("/save_user_info",userController.saveInfoUser);
+router.get("/logout",userController.logOut);
+router.get("/show_info_user",userController.showInfoUser);
 module.exports = router; 

@@ -25,10 +25,10 @@ class AuthController {
         },
         "mk",
         {
-          expiresIn: "1800000", // expires in 24 hours
+          expiresIn: "90d", // expires in 24 hours
         }
       );
-
+      
       return response.send({
         success: true,
         userId: user.id,
