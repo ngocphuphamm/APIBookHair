@@ -46,4 +46,5 @@ router.get("/getThongBao/:id",thongbaoController.getThongBao);
 router.post("/save_user_info",userController.saveInfoUser);
 router.get("/logout",userController.logOut);
 router.get("/show_info_user",userController.showInfoUser);
+router.get("/getListYeuThich", yeuthichController.getListYeuThich);
 module.exports = router; 
