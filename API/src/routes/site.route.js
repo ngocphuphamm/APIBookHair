@@ -14,10 +14,6 @@ const userController = require("../Controller/UserController");
 
 router.post("/login",authController.Login);
 
-router.get("/",(req,res,next)=>{
-    console.log("da vaoo");
-    res.send("hello");
-})
 
 router.get("/getInfoSalon/:id",siteController.getInfoSalon);
 router.post("/getSalon",siteController.getSalon)
@@ -44,7 +40,9 @@ router.get("/getThongBao/:id",thongbaoController.getThongBao);
 
 
 router.post("/save_user_info",userController.saveInfoUser);
+router.post("/saveUserInfoRegister",userController.saveInfoUserRegister);
 router.get("/logout",userController.logOut);
 router.get("/show_info_user",userController.showInfoUser);
 router.get("/getListYeuThich", yeuthichController.getListYeuThich);
+router.post("/register",userController.register);
 module.exports = router; 

@@ -25,7 +25,7 @@ class AuthController {
         },
         "mk",
         {
-          expiresIn: "90d", // expires in 24 hours
+          expiresIn: "90 days", // expires in 24 hours
         }
       );
       
