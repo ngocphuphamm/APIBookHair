@@ -39,14 +39,12 @@ class LichHenController {
       chiTietNoiDung:
         "Lịch Cắt Ngày " +
         req.body.ngayHen +  " " + 
-        "thành công tại" +
+        "Thành Công tại" +
         dichvu["tenSalon"],
     };
 
     const lichhen = new LichHen(customData);
-    await lichhen.save(() => {
-      console.log("thanh cong");
-    });
+    await lichhen.save();
 
     const thongbao = await new ThongBao(customDataThongBao);
     await thongbao.save();

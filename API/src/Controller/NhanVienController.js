@@ -1,9 +1,6 @@
 const NhanVien = require("../models/Nhanvien");
 class NhanVienController {
   async getNhanVienBySalon(req, res, next) {
-    console.log("gio" + req.params.time);
-    console.log("salon" + req.params.idsalon);
-    console.log("dichvu" + req.params.iddichvu);
     const idSalon = req.params.idsalon;
     const iddichvu = Number(req.params.iddichvu);
 
