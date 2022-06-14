@@ -4,11 +4,8 @@ const Salon = require("../models/Salon");
 const DichVu = require("../models/DichVu");
 const YeuThich = require("../models/YeuThich");
 var ObjectId = require("mongodb").ObjectID;
-// const cloudinary = require("../utils/cloudinary");
-class SiteController {
-
-  // 
-  async getInfoSalon(req, res, next) {
+class SalonController {
+   async getInfoSalon(req, res, next) {
     const idSalon = Number(req.params.id);
     const salon = await Salon.findOne({ "id": idSalon });
     console.log(salon);
@@ -92,4 +89,4 @@ class SiteController {
   }
 }
 
-module.exports = new SiteController();
+module.exports = new SalonController();

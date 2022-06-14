@@ -1,5 +1,5 @@
 const bodyParser = require("body-parser");
-const routes = require("../routes");
+const routeAPI = require("../routes/index");
 const cookieParser = require("cookie-parser");
 const path = require('path');
 const cors = require('cors')
@@ -10,7 +10,7 @@ module.exports = app => {
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(cors());
     app.use(cookieParser());
-    routes(app);    
+    app.use("/api",routeAPI);
 }
 
 

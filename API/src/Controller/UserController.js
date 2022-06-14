@@ -43,12 +43,7 @@ class UserController {
       user: user,
     });
   }
-  // [GET] /api/logout
-  async logOut(req, res, next) {
-    res.send({
-      success: true,
-    });
-  }
+
 
   //[GET] /api/showInfoUser
   async showInfoUser(req, res, next) {
@@ -61,41 +56,7 @@ class UserController {
     });
   }
 
-  //[POST] /api/register
-  async register(req,res,next)
-  { 
-      const isUserRegister = await User.findOne({ email :req.body.email})
-      if(isUserRegister)
-      {
-          res.send({ success: false})
-      }
-      else
-      {
 
-          const email = await req.body.email ;
-          const  password = await  req.body.password;
-
-         var token = jwt.sign(
-          {
-             email,
-             password
-          },
-          "mk",
-          {
-            expiresIn: "90d", // expires in 24 hours
-          }
-        );
-         const data = {  
-           name : "",
-           lastname : "",
-           photo : "avatar1.png",
-           phone : 0 ,
-           address : "",
-           isLoggedIn : true,
-         }
-         res.send({ success: true , user : data,token :token });
-      }
-  }
 
 
 
