@@ -12,6 +12,10 @@ const thongbaoController = require("../Controller/ThongBaoController");
 const userController = require("../Controller/UserController");
 
 
+router.get("/",(req,res)=>{
+    res.send("API NGOC PHU")
+})
+
 router.post("/login",authController.Login);
 
 

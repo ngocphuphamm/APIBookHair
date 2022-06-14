@@ -1,8 +1,7 @@
 
 const siteRoute = require("./site.route");
 
-function route(app) {
+module.exports = app => {
 	app.use("/api", siteRoute);
 	
 }
-module.exports = route;
