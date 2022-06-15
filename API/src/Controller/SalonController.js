@@ -1,18 +1,30 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const Salon = require("../models/Salon");
-const DichVu = require("../models/DichVu");
 const YeuThich = require("../models/YeuThich");
 var ObjectId = require("mongodb").ObjectID;
 class SalonController {
    async getInfoSalon(req, res, next) {
-    const idSalon = Number(req.params.id);
-    const salon = await Salon.findOne({ "id": idSalon });
-    console.log(salon);
-    res.send({
-      "success": true,
-      "salon": [salon],
-    })
+    try{
+      const idUser = jwt.decode(req.headers.authorization.split(" ")[1])._id;
+      const idSalon = Number(req.params.id);
+      const salon = await Salon.findOne({ "id": idSalon });
+      const selfLove = await YeuThich.findOne({ "user_id": idUser,"salon_id":req.params.id}) === null ?  false : true;
+     res.status(200).json({
+        "success": true,
+        "salon": [salon],
+        "selfLove" : selfLove,
+      })
+    }
+    catch(err)
+    {
+      console.log(err)
+      res.status(404).json({
+        success: false,
+        err
+      })
+    }
+  
   }
 
 
