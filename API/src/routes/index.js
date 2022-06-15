@@ -10,12 +10,7 @@ const thongBaoRoute = require("./router/thongbao.route");
 const express = require("express");
 const router = express.Router();
 
-router.use("/",(req,res)=>{
-	res.send({
-		success : true,
-		msg : "API NGỌC PHÚ"
-	})
-})
+
 router.use("/salon", salonRoute);
 router.use("/dichvu",dichvuRoute);
 router.use("/auth",authRoute);
