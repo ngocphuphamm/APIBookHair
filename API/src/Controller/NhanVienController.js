@@ -9,7 +9,6 @@ class NhanVienController {
       const time = req.params.time;
       const date = req.params.date;
       let nhanvienListDichVu = [];
-      let nhanvienChuaCoLich = [];
       const listNhanVien = await NhanVien.find({ id_salon: idSalon });
       // list staff work service 
       await listNhanVien.map(async (el) => {
