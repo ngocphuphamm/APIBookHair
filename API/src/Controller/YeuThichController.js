@@ -42,28 +42,37 @@ class YeuThichController {
    
   }
   async getListYeuThich(req, res, next) {
-    const token = req.headers.authorization.split(" ")[1];
-    const idUser = jwt_decode(token)._id;
-    const yeuthich = await YeuThich.find({ user_id: idUser });
-    let array = [];
-    await Promise.all(
-      await yeuthich.map(async (el) => {
-        const id = Number(el["salon_id"]);
-        const salonEntity = await Salon.findOne({ id: id });
-        let salon = {
-          id: salonEntity["id"],
-          hinhAnh: salonEntity["hinhAnh"],
-          tenSalon: salonEntity["tenSalon"],
-        };
-
-        await array.push({ "salon" : salon});
+    try{
+      const idUser = jwt_decode(req.headers.authorization.split(" ")[1]).idUser;
+      const yeuthich = await YeuThich.find({ user_id: idUser });
+      let array = [];
+      await Promise.all(
+        await yeuthich.map(async (el) => {
+          const id = Number(el["salon_id"]);
+          const salonEntity = await Salon.findOne({ id: id });
+          let salon = {
+            id: salonEntity["id"],
+            hinhAnh: salonEntity["hinhAnh"],
+            tenSalon: salonEntity["tenSalon"],
+          };
+  
+          await array.push({ "salon" : salon});
+        })
+      );
+  
+      res.send({
+        "success": true,
+        yeuthich : array
       })
-    );
-
-    res.send({
-      "success": true,
-      yeuthich : array
-    })
+    }
+    catch(err)
+    {
+        res.status(404).json({ 
+          success: false,
+          msg : err
+        })
+    }
+   
   }
 }
 module.exports = new YeuThichController();

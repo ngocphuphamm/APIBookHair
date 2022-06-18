@@ -48,7 +48,7 @@ class UserController {
   //[GET] /api/showInfoUser
   async showInfoUser(req, res, next) {
     const token = req.headers.authorization.split(" ")[1];
-    const idUser = jwt_decode(token)._id;
+    const idUser = jwt_decode(token).idUser;
     const user = await User.findById(idUser);
     res.send({
       success: true,
