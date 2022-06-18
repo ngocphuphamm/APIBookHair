@@ -5,7 +5,7 @@ const User = require("../models/User");
 const NhanVien = require("../models/Nhanvien");
 const Salon = require("../models/Salon");
 var mongoose = require("mongoose");
-const dateToYMD = require("../function/function");
+const {dateToYMD} = require("../function/function");
 class LichHenController {
   // quá trình lịch hẹn post dat lich vấn đề sao lấy được _id trong khi mới save xong
   /* lichhen : {
