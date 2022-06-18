@@ -5,8 +5,6 @@ const {PORT} = require("./config/config");
 const loaders = require("../src/load/index");
 loaders(app);
 app.listen(PORT,() => {
-    
-    const nets = networkInterfaces();
 
     console.log(`Connect server on port http://localhost:${PORT}`);
 });

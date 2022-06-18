@@ -1,5 +1,5 @@
+const { generateAccessToken } = require("../function/function");
 const User = require("../models/User");
-const jwt = require("jsonwebtoken");
 class AuthController {
   // [POST] /api/login
   async Login(req, response, next) {
@@ -11,15 +11,7 @@ class AuthController {
         success: false,
       });
     } else {
-      var token = jwt.sign(
-        {
-          _id: user.id,
-        },
-        "mk",
-        {
-          expiresIn: "90 days", // expires in 24 hours
-        }
-      );
+      var token = generateAccessToken(user.id);
       
       return response.send({
         success: true,

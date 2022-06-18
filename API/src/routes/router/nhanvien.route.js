@@ -3,6 +3,6 @@ const router = express.Router();
 
 const nhanvienController = require("../../Controller/NhanVienController");
 
-router.get("/getNhanVienBySalon/:time,:idsalon,:iddichvu",nhanvienController.getNhanVienBySalon);
+router.get("/getNhanVienBySalon/:date,:time,:idsalon,:iddichvu",nhanvienController.getNhanVienBySalon);
 
 module.exports = router;

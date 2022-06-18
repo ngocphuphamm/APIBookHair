@@ -1,8 +1,7 @@
-const User = require("../models/User");
-const jwt = require("jsonwebtoken");
+
 const Salon = require("../models/Salon");
 const DichVu = require("../models/DichVu");
-const YeuThich = require("../models/YeuThich");
+
 var ObjectId = require("mongodb").ObjectID;
 class DichVuController {
   //[GET] /api/getDichvu
@@ -20,9 +19,9 @@ class DichVuController {
   async getDichVuBySalon(req, res, next) {
 
     const salon = await Salon.findOne({ id: req.params.id });
-
-    const dichvu = await DichVu.find({ tenSalon: salon.tenSalon });
     
+    const dichvu = await DichVu.find({ tenSalon: salon.tenSalon });
+   
     res.send({
       success: true,
       dichvu: dichvu,

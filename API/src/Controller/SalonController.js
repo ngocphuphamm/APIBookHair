@@ -1,24 +1,34 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const Salon = require("../models/Salon");
-const DichVu = require("../models/DichVu");
 const YeuThich = require("../models/YeuThich");
 var ObjectId = require("mongodb").ObjectID;
 class SalonController {
-   async getInfoSalon(req, res, next) {
-    const idSalon = Number(req.params.id);
-    const salon = await Salon.findOne({ "id": idSalon });
-    console.log(salon);
-    res.send({
-      "success": true,
-      "salon": [salon],
-    })
+  async getInfoSalon(req, res, next) {
+    try {
+      const idUser = jwt.decode(req.headers.authorization.split(" ")[1]).idUser;
+      const idSalon = Number(req.params.id);
+      const salon = await Salon.findOne({ "id": idSalon });
+      const selfLove = await YeuThich.findOne({ "user_id": idUser, "salon_id": req.params.id }) === null ? false : true;
+      res.status(200).json({
+        "success": true,
+        "salon": [salon],
+        "selfLove": selfLove,
+      })
+    }
+    catch (err) {
+      console.log(err)
+      res.status(404).json({
+        success: false,
+        err
+      })
+    }
+
   }
 
 
   //[GET] /api/getSalon
   async getSalon(req, res, next) {
-
     const listSalons = await Salon.find();
     // for(var i =0 ; i < listSalons.length ; i++)
     // {
@@ -58,34 +68,53 @@ class SalonController {
 
   //[GET] /api/getSalonById/:id
   async getSalonById(req, res, next) {
-    const id = req.params.id;
-    const favorite = await YeuThich.findOne({ user_id: id });
-    if (favorite) {
-      const salon = await Salon.findOne({ id: favorite["salon_id"] });
-      const customData = {
-        _id: salon._id,
-        id: salon.id,
-        tenSalon: salon.tenSalon,
-        chuTiem: salon.chuTiem,
-        diaChi: salon.diaChi,
-        hinhAnh: salon.hinhAnh,
-        rating: salon.rating,
-        noibat: salon.noibat,
-        selfLove: true,
-      };
-      res.send({
-        success: true,
-        salon: [customData],
-      });
-    } else {
-      const customData = {
-        selfLove: false,
-      };
-      res.send({
-        success: true,
-        salon: [customData],
-      });
+    try {
+      const idUser = jwt.decode(req.headers.authorization.split(" ")[1]).idUser;
+      const id_salon = req.params.id
+      const favorite = await YeuThich.findOne({ user_id: idUser, salon_id: id_salon });
+      const salon = await Salon.findOne({ id: id_salon });
+      if (favorite) {
+        const customData = {
+          _id: salon._id,
+          id: salon.id,
+          tenSalon: salon.tenSalon,
+          chuTiem: salon.chuTiem,
+          diaChi: salon.diaChi,
+          hinhAnh: salon.hinhAnh,
+          rating: salon.rating,
+          noibat: salon.noibat,
+          selfLove: true,
+        };
+        res.send({
+          success: true,
+          salon: [customData],
+        });
+      } else {
+        const customData = {
+          _id: salon._id,
+          id: salon.id,
+          tenSalon: salon.tenSalon,
+          chuTiem: salon.chuTiem,
+          diaChi: salon.diaChi,
+          hinhAnh: salon.hinhAnh,
+          rating: salon.rating,
+          noibat: salon.noibat,
+          selfLove: false,
+        };
+        res.send({
+          success: true,
+          salon: [customData],
+        });
+      }
+
     }
+    catch (err) {
+      res.status(404).json({
+        success: false,
+        msg: err
+      })
+    }
+
   }
 }
 
