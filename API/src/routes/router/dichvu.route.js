@@ -5,7 +5,7 @@ const dichvuController = require("../../Controller/DichVuController");
 
 router.get("/getDichvu",dichvuController.getDichvu)
 router.get("/getDichVuBySalon/:id",dichvuController.getDichVuBySalon);
-
+router.get("/getChiTietDV/:idDichVu",dichvuController.getChiTietDV);
 
 
 
