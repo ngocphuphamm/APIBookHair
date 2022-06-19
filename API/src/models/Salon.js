@@ -9,7 +9,9 @@ const Salon = new mongoose.Schema(
         hinhAnh : String , 
         rating : Number, 
         noiBat : {type : Number , default : 0} ,
-        GioiThieu : String
+        GioiThieu : String,
+        latitude : String ,
+        longitude : String
   
     },
 	{

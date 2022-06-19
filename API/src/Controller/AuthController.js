@@ -1,5 +1,6 @@
 const { generateAccessToken } = require("../function/function");
 const User = require("../models/User");
+const jwt = require("jsonwebtoken");
 class AuthController {
   // [POST] /api/login
   async Login(req, response, next) {
@@ -12,7 +13,7 @@ class AuthController {
       });
     } else {
       var token = generateAccessToken(user.id);
-      
+
       return response.send({
         success: true,
         userId: user.id,
@@ -21,41 +22,41 @@ class AuthController {
       });
     }
   }
-    //[POST] /api/register
-    async register(req,res,next)
-    { 
-        const isUserRegister = await User.findOne({ email :req.body.email})
-        if(isUserRegister)
-        {
-            res.send({ success: false})
+  //[POST] /api/register
+  async register(req, res, next) {
+    try {
+      const email = req.body.email;
+      const password = req.body.password;
+      const isUserRegister = await User.findOne({ email: req.body.email })
+      if (isUserRegister) {
+        res.status(200).json({ success: false })
+      }
+      else {
+        const customData = {
+          name: "",
+          lastname: "",
+          phone: 0,
+          photo: "avartar1.png",
+          email: email,
+          password: password,
+          address: "",
         }
-        else
-        {
-  
-            const email = await req.body.email ;
-            const  password = await  req.body.password;
-  
-           var token = jwt.sign(
-            {
-               email,
-               password
-            },
-            "mk",
-            {
-              expiresIn: "90d", // expires in 24 hours
-            }
-          );
-           const data = {  
-             name : "",
-             lastname : "",
-             photo : "avatar1.png",
-             phone : 0 ,
-             address : "",
-             isLoggedIn : true,
-           }
-           res.send({ success: true , user : data,token :token });
-        }
+        const user = new User(customData);
+        user.save();
+        const token = generateAccessToken(user._id);
+        console.log(user._id);
+        res.status(200).json({ success: true, user: user, token: token, isLoggedIn: true });
+      }
     }
+    catch (err) {
+      res.status(404).json({
+        success: false,
+        msg: err.message
+      })
+    }
+
+
+  }
 
   // [GET] /api/logout
   async logOut(req, res, next) {

@@ -58,12 +58,21 @@ class SalonController {
 
   //[GET] /api/getSalonFeature
   async getSalonFeature(req, res, next) {
-
-    const listSalonFeature = await Salon.find({ noibat: 1 });
-    res.send({
-      success: true,
-      salon: listSalonFeature,
-    });
+    try{
+      const listSalonFeature = await Salon.find({ noiBat: 1 });
+      res.send({
+        success: true,
+        salon: listSalonFeature,
+      });
+    }
+    catch(err)
+    {
+      res.status(404).json({
+        success: false,
+        msg : err.message
+      })
+    }
+   
   }
 
   //[GET] /api/getSalonById/:id

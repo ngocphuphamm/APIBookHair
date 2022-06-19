@@ -6,54 +6,84 @@ class UserController {
   //[POST] /api/saveInfoUserRegister
   async saveInfoUserRegister(req,res,next)
   {
-    const token = req.headers.authorization.split(" ")[1];
-    const email = jwt_decode(token).email;
-    const customData = {
-            name : req.body.name,
-            lastname : req.body.lastname,
-            phone : req.body.phone,
-            photo : "avartar1.png",
-            email : email,
-            password : jwt_decode(token).password,
-            address : req.body.address,
-            
+    try{
+      const token = req.headers.authorization.split(" ")[1];
+      const idUser = jwt_decode(token).idUser;
+      const customData = {
+              name : req.body.name,
+              photo : "avatar1.png",
+              lastname : req.body.lastname,
+              phone : req.body.phone,
+              address : req.body.address,
+       }
+        const user = await User.updateOne(
+          { _id: idUser },
+          {
+            $set: customData,
           }
-          const newUser = await new User(customData);
-          await  newUser.save();
-          console.log(newUser);
-          res.send({
-            success : true,
-            user : newUser,
-            photo : "avatar1.png"
-          })
+        );
+            res.status(200).json({
+              success : true,
+              user : user,
+              photo : "avatar1.png"
+            })
+    }
+    catch(err)
+    {
+        res.status(404).json({
+          success: false,
+          msg : err.message
+        })
+    }
+  
   }
   // [POST] /api/save_user_info
   async saveInfoUser(req, res, next) {
-    const token = req.headers.authorization.split(" ")[1];
-    const idUser = jwt_decode(token)._id;
-    await User.updateOne(
-      { _id: idUser },
-      {
-        $set: req.body,
-      }
-    );
-    const user = await User.findById(idUser);
-    res.send({
-      success: true,
-      user: user,
-    });
+    try{
+      const token = req.headers.authorization.split(" ")[1];
+      const idUser = jwt_decode(token).idUser;
+      await User.updateOne(
+        { _id: idUser },
+        {
+          $set: req.body,
+        }
+      );
+      const user = await User.findById(idUser);
+      res.status(200).json({
+        success: true,
+        user: user,
+      });
+    }
+    catch(err)
+    {
+      res.status(404).json({
+        success: false,
+        msg : err.message
+      })
+    }
+  
   }
 
 
   //[GET] /api/showInfoUser
   async showInfoUser(req, res, next) {
-    const token = req.headers.authorization.split(" ")[1];
-    const idUser = jwt_decode(token).idUser;
-    const user = await User.findById(idUser);
-    res.send({
-      success: true,
-      user: user,
-    });
+    try{
+      const token = req.headers.authorization.split(" ")[1];
+      const idUser = jwt_decode(token).idUser;
+      const user = await User.findById(idUser);
+      res.send({
+        success: true,
+        user: user,
+      });
+    }
+    catch(err)
+    {
+      res.status(404).json({
+        success : false,
+        msg : err.message
+      })
+    }
+   
   }
 
 

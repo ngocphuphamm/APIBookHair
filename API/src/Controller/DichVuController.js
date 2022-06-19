@@ -27,6 +27,35 @@ class DichVuController {
       dichvu: dichvu,
     });
   }
+    //[get] /api/dichvu/getChiTietDV
+  async getChiTietDV(req,res,next)
+  {
+    try{
+        const idDichVu = req.params.idDichVu;
+        const ctDichVu = await DichVu.findOne({"id":idDichVu});
+        const salon = await Salon.findOne({"tenSalon" : ctDichVu.tenSalon});
+        let customData = {
+          id_salon : salon.id,
+          tenDichvu : ctDichVu.tenDichvu,
+          giaTien : ctDichVu.giaTien,
+          thoiGian : ctDichVu.thoiGian,
+          hinhanh : ctDichVu.hinhanh
+        }
+        res.status(200).json({
+          success: true,
+          dichvu : [customData]
+        })
+    }
+    catch(err)
+    {
+      res.status(404).json({
+          success: false,
+          msg : err.message
+      })
+    }
+
+      
+  }
 }
 
 module.exports = new DichVuController();
