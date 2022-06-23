@@ -10,7 +10,6 @@ const LichHen = new mongoose.Schema(
 		thoiGian : String,
 		status : String , 
 		ngayHen : Date
-		
     },
 	{
 		timestamps: true,
