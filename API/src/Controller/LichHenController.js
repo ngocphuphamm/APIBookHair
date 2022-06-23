@@ -39,7 +39,7 @@ class LichHenController {
       chiTietNoiDung:
         "Lịch Cắt Ngày " +
         req.body.ngayHen +  " " + 
-        "Thành Công tại" +
+        "Thành Công tại" + " " +
         dichvu["tenSalon"],
     };
 

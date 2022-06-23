@@ -6,13 +6,22 @@ var ObjectId = require("mongodb").ObjectID;
 class DichVuController {
   //[GET] /api/getDichvu
   async getDichvu(req, res, next) {
-  
-    const listDichVurefSalon = await DichVu.find({});
+    try{
+      const listDichVurefSalon = await DichVu.find({});
 
-    res.send({
-      success: true,
-      dichvu: listDichVurefSalon,
-    });
+      res.send({
+        success: true,
+        dichvu: listDichVurefSalon,
+      });
+    }
+    catch(err)
+    {
+      res.status(404).json({
+        success: false,
+        msg : err.message
+      })
+    }
+ 
   }
 
   //[get] /api/getDichVuBySalon
@@ -55,6 +64,24 @@ class DichVuController {
     }
 
       
+  }
+
+  async getDVNoiBat(req,res,next)
+  {
+    try{
+      const listDichVurefSalon = await DichVu.find({"noiBat":"1"});
+
+      res.send({
+        success: true,
+        dichvu: listDichVurefSalon,
+      });
+    }
+    catch(err){
+        res.status(404).json({
+          success : false,
+          msg : err.message
+        })
+    }
   }
 }
 

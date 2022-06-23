@@ -11,7 +11,8 @@ const DichVu = new mongoose.Schema(
         tenDichvu : String , 
         giaTien : String ,  
 		hinhanh : String,
-		thoiGian : Number
+		thoiGian : Number,
+		noiBat : {type : Number , default : 0} ,
     },
 	{
 		timestamps: true,

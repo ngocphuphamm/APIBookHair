@@ -4,7 +4,11 @@ const {MONGO_URL} = require("../config/config");
 async function connect()
 {
     try {
-        await mongoose.connect(MONGO_URL);
+        mongoose.connect(MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            dbName: "APIBOOKHAIR",
+        });
         console.log('Thành công') 
     }
     catch (error) {
