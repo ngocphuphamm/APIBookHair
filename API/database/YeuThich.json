@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "62ad25db6e9d94a2f3d62fa2"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": "1",
+  "createdAt": {
+    "$date": "2022-06-18T01:09:47.064Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T01:09:47.064Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b3fb52760952c6931cf3c6"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": "2",
+  "createdAt": {
+    "$date": "2022-06-23T05:34:10.187Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T05:34:10.187Z"
+  }
+}]

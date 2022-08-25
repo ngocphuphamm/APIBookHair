@@ -1,0 +1,391 @@
+[{
+  "_id": {
+    "$oid": "6268ecac68bb1692cfa2f83d"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-4-28 thành công tại4RAU",
+  "createdAt": {
+    "$date": "2022-04-27T07:11:40.424Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-27T07:11:40.424Z"
+  }
+},{
+  "_id": {
+    "$oid": "6269112e19e8a5d1958bc008"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 2,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-4-28 thành công tại4RAU",
+  "createdAt": {
+    "$date": "2022-04-27T09:47:26.827Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-27T09:47:26.827Z"
+  }
+},{
+  "_id": {
+    "$oid": "6269f13e27d39da19cfc3165"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 2,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-4-29 thành công tại4RAU",
+  "createdAt": {
+    "$date": "2022-04-28T01:43:26.387Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-28T01:43:26.387Z"
+  }
+},{
+  "_id": {
+    "$oid": "626a0b1eed2eab334cc72887"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-4-29 thành công tại4RAU",
+  "createdAt": {
+    "$date": "2022-04-28T03:33:50.102Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-28T03:33:50.102Z"
+  }
+},{
+  "_id": {
+    "$oid": "6288165e70475ad71c6c6a8f"
+  },
+  "user_id": "628815f9fe2ce439553c126e",
+  "salon_id": 2,
+  "nhanVien_id": 2,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-5-27 thành công tại4RAU",
+  "createdAt": {
+    "$date": "2022-05-20T22:29:50.805Z"
+  },
+  "updatedAt": {
+    "$date": "2022-05-20T22:29:50.805Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad3beaa80140485916bc9a"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-19 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T02:43:54.877Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T02:43:54.877Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad43cef21dfa50b2042794"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T03:17:34.999Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T03:17:34.999Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad4575529514f0d83f156a"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-25 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T03:24:37.283Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T03:24:37.283Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad4a936aacc8e210827681"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-18 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T03:46:27.560Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T03:46:27.560Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad4bb8cde0cea4c6475c49"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-18 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T03:51:20.092Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T03:51:20.092Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad4f112a0b6fa0f8f0d831"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-18 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T04:05:37.417Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T04:05:37.417Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad509b3842e6893b840722"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-18 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T04:12:11.069Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T04:12:11.069Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ad5189ef6c90dfad815488"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-18 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T04:16:09.700Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T04:16:09.700Z"
+  }
+},{
+  "_id": {
+    "$oid": "62adf32aeeac5593447714fd"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-18 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-18T15:45:46.923Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T15:45:46.923Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ae92cd953d12a63530a6fb"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-21 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-19T03:06:53.351Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-19T03:06:53.351Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ae948d5d24280036381ee3"
+  },
+  "user_id": "62471ff9e2200b6e83fe082a",
+  "salon_id": 2,
+  "nhanVien_id": 1,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-19 Thành Công tại4RAU",
+  "createdAt": {
+    "$date": "2022-06-19T03:14:21.095Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-19T03:14:21.095Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b23c1421d7f061fef7ec1f"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-23 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-21T21:45:56.134Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-21T21:45:56.134Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b23ce321d7f061fef7ec4c"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-22 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-21T21:49:23.088Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-21T21:49:23.088Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b3eb76760952c6931cf349"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T04:26:30.796Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T04:26:30.796Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b40c6b760952c6931cf3fe"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T06:47:07.222Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T06:47:07.222Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b40d2f760952c6931cf427"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T06:50:23.482Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T06:50:23.482Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b42272a6a03daccabc98bf"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-30 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T08:21:06.810Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T08:21:06.810Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b42332a6a03daccabc9919"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T08:24:18.469Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T08:24:18.469Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b426faa6a03daccabc995f"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-25 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T08:40:26.308Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T08:40:26.308Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b4758a9a98afcbdf284a47"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 4,
+  "nhanVien_id": 11,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tạiLiêm Barber",
+  "createdAt": {
+    "$date": "2022-06-23T14:15:38.025Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T14:15:38.025Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b47b530623cb9028b6003c"
+  },
+  "user_id": "62b23ab721d7f061fef7ebfe",
+  "salon_id": 0,
+  "nhanVien_id": 3,
+  "noiDung": "Đặt lịch thành công",
+  "chiTietNoiDung": "Lịch Cắt Ngày 2022-6-24 Thành Công tại30Shine",
+  "createdAt": {
+    "$date": "2022-06-23T14:40:19.293Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T14:40:19.293Z"
+  }
+}]

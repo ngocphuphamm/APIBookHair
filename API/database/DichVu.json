@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "624c937929326fb9524f3299"
+  },
+  "id": 1,
+  "tenDichvu": "Nhuộm",
+  "giaTien": "320.000",
+  "hinhanh": "DV01.jpg",
+  "tenSalon": "4RAU",
+  "thoiGian": 120,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "624c9b5329326fb9524f32af"
+  },
+  "id": 2,
+  "tenDichvu": "Cắt tóc",
+  "giaTien": "100.000",
+  "hinhanh": "DV02.jpg",
+  "tenSalon": "30Shine",
+  "thoiGian": 60,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "62598418373178b64fde6104"
+  },
+  "id": 3,
+  "tenDichvu": "Dưỡng tóc",
+  "giaTien": "150.000",
+  "hinhanh": "DV01.jpg",
+  "tenSalon": "4RAU",
+  "thoiGian": 60,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "6269ef5b6a0873692c52bcf2"
+  },
+  "id": 4,
+  "tenDichvu": "Cắt tóc",
+  "giaTien": "200.000",
+  "hinhanh": "DV03.jpeg",
+  "tenSalon": "BarberShop Vũ Trí",
+  "thoiGian": 120,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "6269ef786a0873692c52bcf3"
+  },
+  "id": 5,
+  "tenDichvu": "Nhuộm",
+  "giaTien": "100.000",
+  "hinhanh": "DV04.jpg",
+  "tenSalon": "BarberShop Vũ Trí",
+  "thoiGian": 120,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "62ad33c4ca0777c2e5812f9e"
+  },
+  "id": 6,
+  "tenDichvu": "Nhuộm",
+  "giaTien": "200.000",
+  "hinhanh": "DV30SHINENHUOM.jpg",
+  "tenSalon": "30Shine",
+  "thoiGian": 90,
+  "noiBat": 1
+},{
+  "_id": {
+    "$oid": "62b470fd139444891c44111d"
+  },
+  "id": 7,
+  "tenDichvu": "Cắt tóc ĐT",
+  "giaTien": "100.000",
+  "hinhanh": "DVCATTOCDT.jpg",
+  "tenSalon": "Đông Tây Barber",
+  "thoiGian": 60,
+  "noiBat": 1
+},{
+  "_id": {
+    "$oid": "62b47132139444891c44111e"
+  },
+  "id": 8,
+  "tenDichvu": "Ráy tai ĐT",
+  "giaTien": "150.000",
+  "hinhanh": "raytaiDT.jpg",
+  "tenSalon": "Đông Tây Barber",
+  "thoiGian": 60,
+  "noiBat": 1
+},{
+  "_id": {
+    "$oid": "62b47160139444891c44111f"
+  },
+  "id": 9,
+  "tenDichvu": "Gội Đầu ĐT",
+  "giaTien": "50.000",
+  "hinhanh": "goidauDT.jpg",
+  "tenSalon": "Đông Tây Barber",
+  "thoiGian": 60,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "62b473f3139444891c44112c"
+  },
+  "id": 10,
+  "tenDichvu": "Cắt Tóc",
+  "giaTien": "50.000",
+  "hinhanh": "cattocliem.jpg",
+  "tenSalon": "Liêm Barber",
+  "thoiGian": 60,
+  "noiBat": 1
+},{
+  "_id": {
+    "$oid": "62b4746a139444891c44112d"
+  },
+  "id": 11,
+  "tenDichvu": "Nhuộm Tóc Liêm",
+  "giaTien": "150.000",
+  "hinhanh": "nhuomtocliem.jpg",
+  "tenSalon": "Liêm Barber",
+  "thoiGian": 90,
+  "noiBat": 0
+},{
+  "_id": {
+    "$oid": "62b474d0139444891c44112e"
+  },
+  "id": 12,
+  "tenDichvu": "Cạo Râu Liêm",
+  "giaTien": "50.000",
+  "hinhanh": "caorau.jpg",
+  "tenSalon": "Liêm Barber",
+  "thoiGian": 30,
+  "noiBat": 0
+}]

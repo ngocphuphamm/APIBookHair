@@ -30,26 +30,6 @@ class SalonController {
   //[GET] /api/getSalon
   async getSalon(req, res, next) {
     const listSalons = await Salon.find();
-    // for(var i =0 ; i < listSalons.length ; i++)
-    // {
-
-    // 	if(listSalons[i].id > listSalons[i+1].id)
-    // 	{
-    // 		let temp = listSalons[i].id;
-    // 		listSalons[i].id = listSalons[i+1].id
-    // 		listSalons[i+1].id = temp;
-    // 	}
-    // }
-    // await	listSalons.forEach((el)=>{
-    // 	let totalRating =0 ;
-    // 	let countRating = 0 ;
-    // 	el['totalRating'] = totalRating;
-
-    // 	el['countRating'] = countRating;
-    // 	el['rating'] = 0 ;
-
-    // })
-
     return res.send({
       success: true,
       salon: listSalons,

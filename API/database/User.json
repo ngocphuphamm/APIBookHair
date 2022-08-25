@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "62471ff9e2200b6e83fe082a"
+  },
+  "name": "ngocphuu",
+  "lastname": "phamm",
+  "photo": "avatar1.png",
+  "phone": 23123,
+  "email": "ngocphupham682001@gmail.com",
+  "password": "1234567phu",
+  "address": "123 nGUYEN THI MINH KHAI",
+  "updatedAt": {
+    "$date": "2022-06-19T03:09:01.590Z"
+  }
+},{
+  "_id": {
+    "$oid": "62aeaa00bd5be0b65bf9e51a"
+  },
+  "name": "Pham",
+  "lastname": "Ngoc",
+  "photo": "avatar1.png",
+  "phone": "07860536988",
+  "email": "ngocphupham23@gmail.com",
+  "password": "NgocPhu@123",
+  "address": "23/123 huynh vna nghe",
+  "createdAt": {
+    "$date": "2022-06-19T04:45:52.763Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-19T04:52:28.302Z"
+  }
+},{
+  "_id": {
+    "$oid": "62aeab9d3de7549b829fbc90"
+  },
+  "name": "Pham",
+  "lastname": "Ngoc",
+  "photo": "",
+  "phone": "1231231",
+  "email": "ngocphuu@gmail.com",
+  "password": "NgocPhu@123",
+  "address": "123123",
+  "createdAt": {
+    "$date": "2022-06-19T04:52:45.886Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-19T04:53:05.611Z"
+  }
+},{
+  "_id": {
+    "$oid": "62aeabfd5522a67b59e7cb84"
+  },
+  "name": "123123",
+  "lastname": "123123",
+  "photo": "avatar1.png",
+  "phone": "123123",
+  "email": "ngocphu1@gmail.com",
+  "password": "NgocPhu@123",
+  "address": "23123",
+  "createdAt": {
+    "$date": "2022-06-19T04:54:21.206Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-19T04:54:30.184Z"
+  }
+},{
+  "_id": {
+    "$oid": "62aeae205522a67b59e7cb8c"
+  },
+  "name": "Phammmmmm",
+  "lastname": "Ngoc Phu",
+  "photo": "avatar1.png",
+  "phone": "0786053698",
+  "email": "ngocphuuu@gmail.com",
+  "password": "NgocPhu@123",
+  "address": "123123123",
+  "createdAt": {
+    "$date": "2022-06-19T05:03:28.780Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-19T06:03:24.762Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b23ab721d7f061fef7ebfe"
+  },
+  "name": "Pham Ngoc",
+  "lastname": "Phu",
+  "photo": "avatar1.png",
+  "phone": "0786053698",
+  "email": "test@gmail.com",
+  "password": "NgocPhu@123",
+  "address": "21/1 Nguyen Thi Minh Khai",
+  "createdAt": {
+    "$date": "2022-06-21T21:40:07.110Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-21T21:40:40.306Z"
+  }
+}]

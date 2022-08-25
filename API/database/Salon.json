@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "624aa18a22cf85c6a5a8e45f"
+  },
+  "id": 0,
+  "tenSalon": "30Shine",
+  "chuTiem": "Ngọc Phú",
+  "diaChi": "255/2 Sư Vạn Hạnh , P10 , Quận Tân Bình ",
+  "hinhAnh": "image30shine.jpg",
+  "rating": 4,
+  "noiBat": 1,
+  "gioiThieu": "30Shine tin rằng, cuộc trò chuyện giữa stylist và khách hàng càng cởi mở, chúng ta càng có thêm nhiều kiểu tóc đẹp. Vì thế, các bạn stylist luôn rất thân thiện, sẵn lòng lắng nghe và tìm hiểu nhu cầu của anh.",
+  "latitude": "10.772030",
+  "longitude": "106.668100"
+},{
+  "_id": {
+    "$oid": "624aa7a622cf85c6a5a8e461"
+  },
+  "id": 1,
+  "tenSalon": "BarberShop Vũ Trí",
+  "chuTiem": "Ngọc Phú",
+  "diaChi": "64 Nguyễn Duy Dương, P10 , Quận Tân Bình ",
+  "hinhAnh": "barber2.png",
+  "rating": 2,
+  "noiBat": 0,
+  "gioiThieu": "BarberShop Vũ Trí – sự kết hợp giữa tên của hai anh em ruột thịt, Mr. Đỗ Linh Vũ và Mr. Trí Tam Quốc.\nCó truyền thống làm nghề lâu đời, cha của hai anh là một người lão luyện trong nghề đã hơn 40 năm, nhưng đam mê của cha vẫn chưa bao giờ dừng lại, dù tuổi đã cao, nhưng cha vẫn thầm lặng đứng dưới góc me che bóng râm phủ ngang đầu, chiếc kéo vẫn trên tay và môi cha vẫn luôn mỉm cười với công việc hằng ngày của mình……..",
+  "latitude": "10.821150",
+  "longitude": "106.632700"
+},{
+  "_id": {
+    "$oid": "624aa7b722cf85c6a5a8e462"
+  },
+  "id": 2,
+  "tenSalon": "4RAU",
+  "chuTiem": "Ngọc Phú",
+  "diaChi": "490 Lý Thái Tổ,Quận 10 ",
+  "hinhAnh": "4rau.jpg",
+  "rating": 3,
+  "noiBat": 1,
+  "gioiThieu": "Mời bạn trải nghiệm của sự lịch lãm đàn ông",
+  "latitude": "10.768040",
+  "longitude": "106.672020"
+},{
+  "_id": {
+    "$oid": "62b4707192349db0c01eb7b9"
+  },
+  "id": 3,
+  "tenSalon": "Đông Tây Barber",
+  "chuTiem": "Ngọc Phú",
+  "diaChi": "490 Lý Thái Tổ,Quận 10 ",
+  "hinhAnh": "dongtay.jpg",
+  "rating": 4,
+  "noiBat": 1,
+  "gioiThieu": "Mời bạn trải nghiệm của sự lịch lãm đàn ông",
+  "latitude": "10.768040",
+  "longitude": "106.672020"
+},{
+  "_id": {
+    "$oid": "62b47396139444891c441129"
+  },
+  "id": 4,
+  "tenSalon": "Liêm Barber",
+  "chuTiem": "Ngọc Phú",
+  "diaChi": "490 Lý Thái Tổ,Quận 10 ",
+  "hinhAnh": "liembarber.jpg",
+  "rating": 3,
+  "noiBat": 0,
+  "gioiThieu": "Liem Barber Shop được thành lập vào tháng 05/2015, với cửa hàng đầu tiên tại số 79 Nguyễn Sơn Hà, Quận 3, TP. Hồ Chí Minh. Sau 5 năm, con số này đã lên tới 26 chi nhánh, trải dài từ Bắc tới Nam, đặc biệt là chi nhánh tại Singapore, trở thành địa điểm yêu thích của phái mạnh đến và định hình phong cách.",
+  "latitude": "10.768040",
+  "longitude": "106.672020"
+}]

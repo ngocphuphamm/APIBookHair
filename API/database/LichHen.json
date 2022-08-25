@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "62b47b530623cb9028b6003a"
+  },
+  "id_salon": 0,
+  "id_user": "62b23ab721d7f061fef7ebfe",
+  "id_NhanVien": 3,
+  "id_DichVu": 2,
+  "thanhTien": "100.000",
+  "thoiGian": "10:00",
+  "status": "Chưa xác nhận",
+  "ngayHen": {
+    "$date": "2022-06-23T17:00:00Z"
+  },
+  "createdAt": {
+    "$date": "2022-06-23T14:40:19.279Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-23T14:40:19.279Z"
+  }
+}]

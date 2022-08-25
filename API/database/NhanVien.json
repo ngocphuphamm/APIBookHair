@@ -1,0 +1,181 @@
+[{
+  "_id": {
+    "$oid": "625bef870b30aefd572e4211"
+  },
+  "hoTen": "Ngọc Phú",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 2,
+  "id_NhanVien": 1,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    1,
+    3
+  ]
+},{
+  "_id": {
+    "$oid": "625befeb0b30aefd572e4222"
+  },
+  "hoTen": "Quốc Thiên",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 2,
+  "id_NhanVien": 2,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    3
+  ]
+},{
+  "_id": {
+    "$oid": "62ad34b7ca0777c2e5812fc7"
+  },
+  "hoTen": "Sơn Tùng",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 0,
+  "id_NhanVien": 3,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    2,
+    6
+  ]
+},{
+  "_id": {
+    "$oid": "62ad3513ca0777c2e5812fc8"
+  },
+  "hoTen": "Ngọc Thiện",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 0,
+  "id_NhanVien": 4,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    6
+  ]
+},{
+  "_id": {
+    "$oid": "62b46f7592349db0c01eb7b4"
+  },
+  "hoTen": "Ngọc Phúc",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 2,
+  "id_NhanVien": 5,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    1,
+    3
+  ]
+},{
+  "_id": {
+    "$oid": "62b46fe392349db0c01eb7b5"
+  },
+  "hoTen": "Thiên Phú",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 1,
+  "id_NhanVien": 6,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    4,
+    5
+  ]
+},{
+  "_id": {
+    "$oid": "62b4700092349db0c01eb7b6"
+  },
+  "hoTen": "Phúc Trần",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 1,
+  "id_NhanVien": 7,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    4
+  ]
+},{
+  "_id": {
+    "$oid": "62b47181139444891c441122"
+  },
+  "hoTen": "Phú Phạm",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 3,
+  "id_NhanVien": 8,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    7,
+    8,
+    9
+  ]
+},{
+  "_id": {
+    "$oid": "62b4719d139444891c441123"
+  },
+  "hoTen": "Đạt Trần",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 3,
+  "id_NhanVien": 9,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    7,
+    8
+  ]
+},{
+  "_id": {
+    "$oid": "62b471b7139444891c441124"
+  },
+  "hoTen": "Thanh Phương",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 3,
+  "id_NhanVien": 10,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    7,
+    9
+  ]
+},{
+  "_id": {
+    "$oid": "62b474fd139444891c441131"
+  },
+  "hoTen": "Ngọc Liêm",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 4,
+  "id_NhanVien": 11,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    10,
+    11,
+    12
+  ]
+},{
+  "_id": {
+    "$oid": "62b4750e139444891c441132"
+  },
+  "hoTen": "Ngọc Phú",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 4,
+  "id_NhanVien": 12,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    10
+  ]
+},{
+  "_id": {
+    "$oid": "62b47523139444891c441133"
+  },
+  "hoTen": "Tấn Tài",
+  "diaChi": "5/2 Nguyễn Thị Minh Khai",
+  "soDienThoai": "0290182",
+  "id_salon": 4,
+  "id_NhanVien": 13,
+  "chucvu": "Nhân Viên",
+  "id_DichVu": [
+    10,
+    11
+  ]
+}]
